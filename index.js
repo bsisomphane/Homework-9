@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./generateMarkdown");
 
 let questions = [
   {
@@ -28,8 +28,10 @@ let questions = [
     name: "usage",
   },
   {
-    message: "What licenses are required with this project?",
-    name: "licenses",
+    type: 'list',
+    message: "Choose a license for your project.",
+    choices: ['GNU GPLv3', 'GNU GPL', 'Mozilla Public License 2.0'],
+    name: 'license'
   },
   {
     message: "Who were the contributors to this project?",
