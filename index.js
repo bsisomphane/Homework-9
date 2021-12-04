@@ -12,10 +12,6 @@ let questions = [
     name: "table of content",
   },
   {
-    message: "What is the name of the user?",
-    name: "userName",
-  },
-  {
     message: "Please provide a description of the project.",
     name: "description",
   },
@@ -30,7 +26,7 @@ let questions = [
   {
     type: 'list',
     message: "Choose a license for your project.",
-    choices: ['GNU GPLv3', 'GNU GPL', 'Mozilla Public License 2.0'],
+    choices: ['GNU GPLv3', 'GNU GPL', 'MIT'],
     name: 'license'
   },
   {
@@ -42,8 +38,13 @@ let questions = [
     name: "test",
   },
   {
+  type: 'input',
+  message: "What is your GitHub username? (No @ needed)",
+  name: 'userName',
+  },
+  {
     message: "What is the user github email address?",
-    name: "GitHub user email",
+    name: "email",
   },
 ];
 

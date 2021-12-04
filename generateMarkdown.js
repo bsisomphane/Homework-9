@@ -15,31 +15,35 @@ function generateMarkdown(response) {
   -[username](#username)
   -[profile](#profile)
   
-  ${response.username}
+ 
   ## username:
-  
-      ${response.description}
+   ${response.userName}
+     
   ## description:
-  
-      ${response.installation}
+   ${response.description}
+     
   ## installation:
-  
-      ${response.usage}
+   ${response.installation}
+     
   ## usage:
-  
-      ${response.licenses}
+   ${response.usage}
+     
   ## licenses:
-  
-      ${response.contribution}
+   ${response.license}
+     
   ## contribution:
-  
-      ${response.test}
+   ${response.contribution}
+      
   ## test:
-  
-      ${response.email}
+  ${response.test}
+     
   ## Questions?:
-  
-`;
+  For any questions, please contact me with the information below:
+ 
+  GitHub: Github.com/${response.userName}/
+
+  Email: ${response.email}
+  `;
 };
 function renderLicenseBadge(license) {
   let licenseType = license.license; 
